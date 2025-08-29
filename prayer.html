@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muslim Lite — Prayer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+<input type="radio" name="lang" id="lang-en" checked>
+<input type="radio" name="lang" id="lang-ru">
+<input type="radio" name="lang" id="lang-tg">
+<input type="radio" name="lang" id="lang-id">
+<input type="radio" name="lang" id="lang-zh">
+
+  <div class="site">
+    <header class="wrap">
+      
+<div class="brand">
+  <div class="logo" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M14 3a9 9 0 100 18 9 9 0 010-18z" fill="#67e8f9"/>
+      <path d="M18 3a9 9 0 110 18c-4.97 0-9-4.03-9-9 0-4.97 4.03-9 9-9z" fill="#0b1220"/>
+      <path d="M19 10l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z" fill="#94f7c1"/>
+    </svg>
+  </div>
+  <div>
+    <h1 style="margin:0; font-size:18px">Muslim Lite — <span data-lang="en">Static</span><span data-lang="ru">Статик</span><span data-lang="tg">Статик</span><span data-lang="id">Statik</span><span data-lang="zh">静态版</span></h1>
+    <div class="tag" data-lang="en">HTML + CSS only (no JavaScript)</div>
+    <div class="tag" data-lang="ru">Только HTML + CSS (без JavaScript)</div>
+    <div class="tag" data-lang="tg">Фақат HTML + CSS (бе JavaScript)</div>
+    <div class="tag" data-lang="id">Hanya HTML + CSS (tanpa JavaScript)</div>
+    <div class="tag" data-lang="zh">仅 HTML + CSS（无 JavaScript）</div>
+  </div>
+</div>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="prayer.html">Prayer</a>
+  <a href="quran.html">Quran</a>
+  <a href="settings.html">Settings</a>
+</nav>
+
+    </header>
+    <main class="wrap">
+      <div class="card">
+        <h2 class="title" data-lang="en">Country & City Finder</h2>
+        <h2 class="title" data-lang="ru">Выбор страны и города</h2>
+        <h2 class="title" data-lang="tg">Интихоби кишвар ва шаҳр</h2>
+        <h2 class="title" data-lang="id">Pilih negara & kota</h2>
+        <h2 class="title" data-lang="zh">选择国家与城市</h2>
+        <div class="small muted" style="margin:-4px 0 10px">
+          <span data-lang="en">Choose your country → city → open the linked prayer timetable site.</span>
+          <span data-lang="ru">Выберите страну → город → откройте страницу расписания намаза.</span>
+          <span data-lang="tg">Кишвар → шаҳр → саҳифаи вақти намозро кушоед.</span>
+          <span data-lang="id">Pilih negara → kota → buka situs jadwal salat.</span>
+          <span data-lang="zh">选择国家→城市→打开礼拜时间网站。</span>
+        </div>
+        <div class="chooser">
+          <div class="row-wrap">
+            <span class="muted small" style="align-self:center" data-lang="en">Country:</span>
+            <span class="muted small" style="align-self:center" data-lang="ru">Страна:</span>
+            <span class="muted small" style="align-self:center" data-lang="tg">Кишвар:</span>
+            <span class="muted small" style="align-self:center" data-lang="id">Negara:</span>
+            <span class="muted small" style="align-self:center" data-lang="zh">国家：</span>
+            <span class="choice"><input type="radio" name="country" id="country-tj" checked><label for="country-tj">Tajikistan</label></span>
+            <span class="choice"><input type="radio" name="country" id="country-ru"><label for="country-ru">Russia</label></span>
+            <span class="choice"><input type="radio" name="country" id="country-id"><label for="country-id">Indonesia</label></span>
+            <span class="choice"><input type="radio" name="country" id="country-cn"><label for="country-cn">China</label></span>
+          </div>
+
+          <div class="country-panels">
+            <div class="city-panel" id="cities-tj">
+              <div class="row-wrap">
+                <span class="muted small" data-lang="en">City:</span>
+                <span class="muted small" data-lang="ru">Город:</span>
+                <span class="muted small" data-lang="tg">Шаҳр:</span>
+                <span class="muted small" data-lang="id">Kota:</span>
+                <span class="muted small" data-lang="zh">城市：</span>
+                <span class="choice"><input type="radio" name="city-tj" id="tj-dushanbe" checked><label for="tj-dushanbe">Dushanbe</label></span>
+                <span class="choice"><input type="radio" name="city-tj" id="tj-khujand"><label for="tj-khujand">Khujand</label></span>
+              </div>
+              <div class="links">
+                <div class="linkset" id="tj-dushanbe-links">
+                  <a class="pill" href="https://www.islamicfinder.org/world/tajikistan/1221874/dushanbe-prayer-times/" target="_blank" rel="noopener">IslamicFinder — Dushanbe</a>
+                  <a class="pill" href="https://www.islamicfinder.org/world/tajikistan/" target="_blank" rel="noopener">All Tajikistan</a>
+                </div>
+                <div class="linkset" id="tj-khujand-links">
+                  <a class="pill" href="https://www.islamicfinder.org/world/tajikistan/1514879/khujand-prayer-times/" target="_blank" rel="noopener">IslamicFinder — Khujand</a>
+                  <a class="pill" href="https://www.islamicfinder.org/world/tajikistan/" target="_blank" rel="noopener">All Tajikistan</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="city-panel" id="cities-ru">
+              <div class="row-wrap">
+                <span class="choice"><input type="radio" name="city-ru" id="ru-moscow" checked><label for="ru-moscow">Moscow</label></span>
+                <span class="choice"><input type="radio" name="city-ru" id="ru-spb"><label for="ru-spb">Saint Petersburg</label></span>
+                <span class="choice"><input type="radio" name="city-ru" id="ru-kazan"><label for="ru-kazan">Kazan</label></span>
+                <span class="choice"><input type="radio" name="city-ru" id="ru-makhachkala"><label for="ru-makhachkala">Makhachkala</label></span>
+              </div>
+              <div class="links">
+                <div class="linkset" id="ru-moscow-links">
+                  <a class="pill" href="https://www.islamicfinder.org/world/russia/524901/moscow-prayer-times/" target="_blank" rel="noopener">IslamicFinder — Moscow</a>
+                  <a class="pill" href="https://www.islamicfinder.org/world/russia/" target="_blank" rel="noopener">All Russia</a>
+                </div>
+                <div class="linkset" id="ru-spb-links">
+                  <a class="pill" href="https://www.islamicfinder.org/world/russia/498817/saint-petersburg-prayer-times/" target="_blank" rel="noopener">IslamicFinder — Saint Petersburg</a>
+                  <a class="pill" href="https://www.islamicfinder.org/world/russia/" target="_blank" rel="noopener">All Russia</a>
+                </div>
+                <div class="linkset" id="ru-kazan-links">
+                  <a class="pill" href="https://www.islamicfinder.org/world/russia/551487/kazan-prayer-times/" target="_blank" rel="noopener">IslamicFinder — Kazan</a>
+                  <a class="pill" href="https://www.islamicfinder.org/world/russia/" target="_blank" rel="noopener">All Russia</a>
+                </div>
+                <div class="linkset" id="ru-makhachkala-links">
+                  <a class="pill" href="https://www.islamicfinder.org/world/russia/532096/makhachkala-prayer-times/" target="_blank" rel="noopener">IslamicFinder — Makhachkala</a>
+                  <a class="pill" href="https://www.islamicfinder.org/world/russia/" target="_blank" rel="noopener">All Russia</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="city-panel" id="cities-id">
+              <div class="row-wrap">
+                <span class="choice"><input type="radio" name="city-id" id="id-jakarta" checked><label for="id-jakarta">Jakarta</label></span>
+                <span class="choice"><input type="radio" name="city-id" id="id-surabaya"><label for="id-surabaya">Surabaya</label></span>
+              </div>
+              <div class="links">
+                <div class="linkset" id="id-jakarta-links">
+                  <a class="pill" href="https://bimasislam.kemenag.go.id/jadwalshalat" target="_blank" rel="noopener">Kemenag — Jadwal Sholat</a>
+                  <a class="pill" href="https://www.islamicfinder.org/world/indonesia/1642911/jakarta-prayer-times/" target="_blank" rel="noopener">IslamicFinder — Jakarta</a>
+                  <a class="pill" href="https://www.jadwalsholat.org/" target="_blank" rel="noopener">JadwalSholat.org</a>
+                </div>
+                <div class="linkset" id="id-surabaya-links">
+                  <a class="pill" href="https://bimasislam.kemenag.go.id/jadwalshalat" target="_blank" rel="noopener">Kemenag — Jadwal Sholat</a>
+                  <a class="pill" href="https://www.islamicfinder.org/world/indonesia/1625822/surabaya-prayer-times/" target="_blank" rel="noopener">IslamicFinder — Surabaya</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="city-panel" id="cities-cn">
+              <div class="row-wrap">
+                <span class="choice"><input type="radio" name="city-cn" id="cn-beijing" checked><label for="cn-beijing">Beijing</label></span>
+                <span class="choice"><input type="radio" name="city-cn" id="cn-urumqi"><label for="cn-urumqi">Urumqi</label></span>
+                <span class="choice"><input type="radio" name="city-cn" id="cn-guangzhou"><label for="cn-guangzhou">Guangzhou</label></span>
+              </div>
+              <div class="links">
+                <div class="linkset" id="cn-beijing-links">
+                  <a class="pill" href="https://www.islamicfinder.org/world/china/1816670/beijing-prayer-times/" target="_blank" rel="noopener">IslamicFinder — Beijing</a>
+                  <a class="pill" href="https://www.islamicfinder.org/world/china/" target="_blank" rel="noopener">All China</a>
+                </div>
+                <div class="linkset" id="cn-urumqi-links">
+                  <a class="pill" href="https://www.islamicfinder.org/world/china/42137519/urumqi-13-cn-prayer-times/" target="_blank" rel="noopener">IslamicFinder — Urumqi</a>
+                  <a class="pill" href="https://www.islamicfinder.org/world/china/" target="_blank" rel="noopener">All China</a>
+                </div>
+                <div class="linkset" id="cn-guangzhou-links">
+                  <a class="pill" href="https://www.islamicfinder.org/world/china/1809858/guangzhou-prayer-times/" target="_blank" rel="noopener">IslamicFinder — Guangzhou</a>
+                  <a class="pill" href="https://www.islamicfinder.org/world/china/" target="_blank" rel="noopener">All China</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+<div class="lang-switch" role="group" aria-label="Language">
+  <label for="lang-en">EN</label>
+  <label for="lang-ru">RU</label>
+  <label for="lang-tg">TG</label>
+  <label for="lang-id">ID</label>
+  <label for="lang-zh">简体</label>
+</div>
+
+      </div>
+    </main>
+    <footer><div>© 2025 Muslim Lite — Static.</div></footer>
+  </div>
+</body>
+</html>
