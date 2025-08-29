@@ -1,0 +1,66 @@
+:root{ --bg:#0b1220; --card:#121a2e; --card2:#0f1628; --text:#e9eef7; --muted:#a7b3cc; --accent:#67e8f9; --accent2:#94f7c1; --line:#202a44; --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.35); }
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0; color:var(--text); background:radial-gradient(1000px 700px at 110% -10%, #243a67 0%, #10182b 50%, var(--bg) 100%); font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial}
+.wrap{max-width:1100px; margin:0 auto; padding:18px}
+header{display:flex; align-items:center; gap:12px; padding:14px 16px; position:sticky; top:0; z-index:5; backdrop-filter:saturate(120%) blur(8px); background:rgba(11,18,32,.7); border-bottom:1px solid var(--line)}
+.brand{display:flex; align-items:center; gap:10px}
+.logo{width:28px; height:28px; border-radius:6px; display:grid; place-items:center; background:#0b162b; box-shadow:inset 0 0 12px rgba(0,0,0,.5)}
+.logo svg{width:18px; height:18px}
+.tag{font-size:12px; color:var(--muted)}
+nav{margin-left:auto; display:flex; gap:8px; flex-wrap:wrap}
+nav a{padding:8px 12px; border:1px solid var(--line); border-radius:10px; background:linear-gradient(180deg,var(--card),var(--card2)); color:var(--text); text-decoration:none}
+nav a[aria-current="page"]{outline:2px solid var(--accent)}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01)); border:1px solid var(--line); border-radius:var(--radius); padding:16px; box-shadow:var(--shadow)}
+.title{font-weight:800; letter-spacing:.2px; margin:0 0 8px}
+.muted{color:var(--muted)}
+.grid{display:grid; gap:16px; grid-template-columns:1.2fr .8fr}
+@media (max-width: 900px){.grid{grid-template-columns:1fr}}
+.row{display:flex; align-items:center; justify-content:space-between; border-top:1px dashed var(--line); padding:10px 0}
+.row:first-child{border-top:none}
+.pill{display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px; border:1px solid var(--line); background:linear-gradient(180deg,var(--card),var(--card2)); font-size:14px}
+.small{font-size:12px}
+.notice{border-left:3px solid var(--accent); padding:10px; background:rgba(255,255,255,.02); border-radius:10px}
+footer{padding:20px; text-align:center; color:var(--muted)}
+
+/* Language radios */
+.lang-switch{display:flex; gap:6px; align-items:center; flex-wrap:wrap; margin-top:8px}
+.lang-switch label{cursor:pointer; padding:6px 10px; border:1px solid var(--line); border-radius:10px; background:linear-gradient(180deg,var(--card),var(--card2)); font-size:12px; color:var(--text)}
+input[name="lang"]{position:absolute; left:-9999px}
+[data-lang]{display:none}
+#lang-en:checked ~ .site [data-lang="en"]{display:inline}
+#lang-ru:checked ~ .site [data-lang="ru"]{display:inline}
+#lang-tg:checked ~ .site [data-lang="tg"]{display:inline}
+#lang-id:checked ~ .site [data-lang="id"]{display:inline}
+#lang-zh:checked ~ .site [data-lang="zh"]{display:inline}
+
+/* Quran list */
+.surah-list{columns:4; column-gap:16px; padding-left:18px}
+.surah-list a{color:var(--accent); text-decoration:none}
+.surah-list a:hover{text-decoration:underline}
+@media (max-width:900px){.surah-list{columns:2}}
+
+/* Country/City picker (Prayer page) */
+.chooser{display:grid; gap:12px}
+.row-wrap{display:flex; gap:10px; flex-wrap:wrap}
+.choice{position:relative}
+.choice input{position:absolute; left:-9999px}
+.choice label{cursor:pointer; padding:6px 10px; border:1px solid var(--line); border-radius:10px; background:linear-gradient(180deg,var(--card),var(--card2)); font-size:13px}
+.choice input:checked + label{outline:2px solid var(--accent)}
+.city-panel{display:none}
+#country-tj:checked ~ .country-panels #cities-tj,
+#country-ru:checked ~ .country-panels #cities-ru,
+#country-id:checked ~ .country-panels #cities-id,
+#country-cn:checked ~ .country-panels #cities-cn{display:block}
+.city-panel .links .linkset{display:none}
+#tj-dushanbe:checked ~ .links #tj-dushanbe-links,
+#tj-khujand:checked ~ .links #tj-khujand-links,
+#id-jakarta:checked ~ .links #id-jakarta-links,
+#id-surabaya:checked ~ .links #id-surabaya-links,
+#ru-moscow:checked ~ .links #ru-moscow-links,
+#ru-spb:checked ~ .links #ru-spb-links,
+#ru-kazan:checked ~ .links #ru-kazan-links,
+#ru-makhachkala:checked ~ .links #ru-makhachkala-links,
+#cn-beijing:checked ~ .links #cn-beijing-links,
+#cn-urumqi:checked ~ .links #cn-urumqi-links,
+#cn-guangzhou:checked ~ .links #cn-guangzhou-links{display:block}
